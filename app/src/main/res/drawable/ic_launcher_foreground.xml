@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Logo "Hex Tunnel": hexagonal shield with a tunnel gateway inside. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillAlpha="0.10"
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,28L76.5,41L76.5,67L54,80L31.5,67L31.5,41Z"
+        android:strokeColor="#FFFFFF"
+        android:strokeLineJoin="round"
+        android:strokeWidth="4" />
+    <path
+        android:pathData="M41,69V56a13,13 0,0 1,26 0V69"
+        android:strokeColor="#FFFFFF"
+        android:strokeLineCap="round"
+        android:strokeWidth="4.5" />
+    <path
+        android:pathData="M48,69V57.5a6,6 0,0 1,12 0V69"
+        android:strokeColor="#3DF5C4"
+        android:strokeLineCap="round"
+        android:strokeWidth="4.5" />
+</vector>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Proxy VPN"
+            android:textColor="@color/primary"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- Status -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/card"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <TextView
+                android:id="@+id/txtStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Disconnected"
+                android:textColor="@color/idle"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Enter proxy details, then tap Connect"
+                android:textColor="#555555"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnConnect"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/primary"
+            android:text="Connect"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="#DDDDDD" />
+
+        <!-- Proxy details -->
+        <TextView
+            style="@style/Label"
+            android:text="Proxy type" />
+
+        <RadioGroup
+            android:id="@+id/grpType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radSocks5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="SOCKS5" />
+
+            <RadioButton
+                android:id="@+id/radHttp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="HTTP / HTTPS (CONNECT)" />
+        </RadioGroup>
+
+        <TextView
+            style="@style/Label"
+            android:text="Host" />
+
+        <EditText
+            android:id="@+id/edtHost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Proxy IP or domain"
+            android:importantForAutofill="no"
+            android:inputType="textUri"
+            android:maxLines="1" />
+
+        <TextView
+            style="@style/Label"
+            android:text="Port" />
+
+        <EditText
+            android:id="@+id/edtPort"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="1 - 65535"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="5" />
+
+        <Switch
+            android:id="@+id/swAuth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="Use username &amp; password"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:id="@+id/boxAuth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/Label"
+                android:text="Username" />
+
+            <EditText
+                android:id="@+id/edtUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:importantForAutofill="no"
+                android:inputType="textNoSuggestions|textVisiblePassword"
+                android:maxLines="1" />
+
+            <TextView
+                style="@style/Label"
+                android:text="Password" />
+
+            <EditText
+                android:id="@+id/edtPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:importantForAutofill="no"
+                android:inputType="textPassword"
+                android:maxLines="1" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="16dp"
+            android:text="Save" />
+
+    </LinearLayout>
+</ScrollView>
